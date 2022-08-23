@@ -2,18 +2,15 @@ import game_object, images, error
 import os
 import cv2
 
-def init():
-    e = Engine()
-
 class Engine:
     def __init__(self):
         self.collisions_objects = []
         self.transforms = []
-        self.phycics = Physics()
 
 
 class Physics(Engine):
     def __init__(self):
+        super().__init__()
         self.transforms_with_phycics = self.GetPhycicsTransforms()
         self.transforms_with_colliders = self.GetCollidersTranforms()
 
@@ -72,7 +69,7 @@ class Display:
             print(type(image))
             os._exit(0)
         else:
-            cv2.imshow(self.caption, image)
+            cv2.imshow(self.caption, image.image)
 
     def update(self):
         cv2.cvtColor(self.background, cv2.COLOR_BGR2GRAY)

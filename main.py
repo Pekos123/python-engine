@@ -1,16 +1,16 @@
-import engine as e
+import engine as en
 
 # --- OBJECTS --- #
 
 # ENGINE OBJECTS
-display = e.Display(1080, 720, "LOL THIS WORK ;O")
+display = en.Display(1080, 720, "LOL THIS WORK ;O")
 
 # TRANSFORM OBJECTS
-e.init()
+_engine = en.Engine()
 
-transform = e.game_object.Transform(200, 200)
+transform = en.game_object.Transform(200, 200)
 
-sprite = e.images.Sprite("sprite.jpg", (0.1, 0.1))
+sprite = en.images.Sprite("sprite.jpg", (0.1, 0.1))
 
 transform.sprite = sprite
 
@@ -23,8 +23,6 @@ run = True
 while run:
     display.update()
 
-    _engine.Engine.transforms.append(transform)
+    _engine.transforms.append(transform)
 
-    _engine.Engine.DoBeforeLoop()
-
-    display.draw(sprite)
+    #display.draw(sprite) 
