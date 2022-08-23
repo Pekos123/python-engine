@@ -3,7 +3,7 @@ import engine as en
 # --- OBJECTS --- #
 
 # ENGINE OBJECTS
-display = en.Display(1080, 720, "LOL THIS WORK ;O")
+display = en.Display(720, 320, "LOL THIS WORK ;O")
 
 # TRANSFORM OBJECTS
 _engine = en.Engine()
